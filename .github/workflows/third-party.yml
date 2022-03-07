@@ -13,12 +13,12 @@ jobs:
     runs-on: 'ubuntu-latest'
     steps:
     - name: Checkout Jekyll
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         fetch-depth: 5
         path: jekyll
     - name: Checkout Third-Party Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         repository: ashmaroli/tomjoht.github.io
         path: sandbox
