@@ -11,9 +11,9 @@
   <link rel="preload" href="/css/screen.css" as="style">
   <link rel="stylesheet" href="/css/screen.css">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Quickstart | Jekyll • Simple, blog-aware, static sites</title>
-<meta name="generator" content="Jekyll v4.2.0" />
+<meta name="generator" content="Jekyll v4.3.1" />
 <meta property="og:title" content="Quickstart" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Jekyll is a static site generator. It takes text written in your favorite markup language and uses layouts to create a static website. You can tweak the site’s look and feel, URLs, the data displayed on the page, and more." />
@@ -23,14 +23,14 @@
 <meta property="og:site_name" content="Jekyll • Simple, blog-aware, static sites" />
 <meta property="og:image" content="https://jekyllrb.com/img/jekyll-og.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-04-08T08:57:04-07:00" />
+<meta property="article:published_time" content="2022-11-15T19:20:46-08:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://jekyllrb.com/img/jekyll-og.png" />
 <meta property="twitter:title" content="Quickstart" />
 <meta name="twitter:site" content="@jekyllrb" />
 <meta name="google-site-verification" content="onQcXpAvtHBrUI5LlroHNE_FP0b2qvFyPq7VZw36iEY" />
 <script type="application/ld+json">
-{"description":"Jekyll is a static site generator. It takes text written in your favorite markup language and uses layouts to create a static website. You can tweak the site’s look and feel, URLs, the data displayed on the page, and more.","url":"https://jekyllrb.com/docs/","@type":"BlogPosting","headline":"Quickstart","dateModified":"2021-04-08T08:57:04-07:00","datePublished":"2021-04-08T08:57:04-07:00","image":"https://jekyllrb.com/img/jekyll-og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://jekyllrb.com/docs/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://jekyllrb.com/img/logo-2x.png"}},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-15T19:20:46-08:00","datePublished":"2022-11-15T19:20:46-08:00","description":"Jekyll is a static site generator. It takes text written in your favorite markup language and uses layouts to create a static website. You can tweak the site’s look and feel, URLs, the data displayed on the page, and more.","headline":"Quickstart","image":"https://jekyllrb.com/img/jekyll-og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://jekyllrb.com/docs/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://jekyllrb.com/img/logo-2x.png"}},"url":"https://jekyllrb.com/docs/"}</script>
 <!-- End Jekyll SEO tag -->
 
   <!--[if lt IE 9]>
@@ -62,7 +62,7 @@
 </div>
     <div class="meta hide-on-mobiles">
       <ul>
-        <li><a href="https://github.com/jekyll/jekyll/releases/tag/v4.2.0">v4.2.0</a></li>
+        <li><a href="https://github.com/jekyll/jekyll/releases/tag/v4.3.1">v4.3.1</a></li>
         <li><a href="https://github.com/jekyll/jekyll">GitHub</a></li>
       </ul>
     </div>
@@ -137,7 +137,7 @@ tweak the site’s look and feel, URLs, the data displayed on the page, and more
 <p>Jekyll requires the following:</p>
 
 <ul>
-  <li>Ruby version <strong>2.4.0</strong> or higher</li>
+  <li>Ruby version <strong>2.5.0</strong> or higher</li>
   <li>RubyGems</li>
   <li>GCC and Make</li>
 </ul>
@@ -149,23 +149,25 @@ tweak the site’s look and feel, URLs, the data displayed on the page, and more
 <ol>
   <li>Install all <a href="/docs/installation/">prerequisites</a>.</li>
   <li>Install the jekyll and bundler <a href="/docs/ruby-101/#gems">gems</a>.
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll bundler
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>jekyll bundler
 </code></pre></div>    </div>
   </li>
   <li>Create a new Jekyll site at <code class="language-plaintext highlighter-rouge">./myblog</code>.
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll new myblog
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll new myblog
 </code></pre></div>    </div>
   </li>
   <li>Change into your new directory.
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd myblog
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>myblog
 </code></pre></div>    </div>
   </li>
   <li>Build the site and make it available on a local server.
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec jekyll serve
+    <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
 </code></pre></div>    </div>
   </li>
   <li>Browse to <a href="http://localhost:4000" target="_blank">http://localhost:4000</a></li>
 </ol>
+
+<p class="note warning">If you are using Ruby version 3.0.0 or higher, step 5 <a href="https://github.com/github/pages-gem/issues/752">may fail</a>. You may fix it by adding <code class="language-plaintext highlighter-rouge">webrick</code> to your dependencies: <code class="language-plaintext highlighter-rouge">bundle add webrick</code></p>
 
 <p class="note info">Pass the <code class="language-plaintext highlighter-rouge">--livereload</code> option to <code class="language-plaintext highlighter-rouge">serve</code> to automatically refresh the page with each change you make to the source files: <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve --livereload</code></p>
 
@@ -229,7 +231,7 @@ If you still have issues, see <a href="/docs/troubleshooting/#configuration-prob
   <div class="grid">
     <div class="unit one-third center-on-mobiles">
       <p>Jekyll is lovingly maintained by the <a href="/team/">core team</a> of volunteers. </p>
-      <p>The contents of this website are <br />&copy;&nbsp;2021 under the terms of the <a href="https://github.com/jekyll/jekyll/blob/master/LICENSE">MIT&nbsp;License</a>.</p>
+      <p>The contents of this website are <br />&copy;&nbsp;2022 under the terms of the <a href="https://github.com/jekyll/jekyll/blob/master/LICENSE">MIT&nbsp;License</a>.</p>
     </div>
     <div class="unit two-thirds align-right center-on-mobiles">
       <p>
